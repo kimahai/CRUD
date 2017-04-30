@@ -44,6 +44,7 @@ function deleteById($id){
     $sql = "DELETE FROM article WHERE id= :id";
     $statement = $pdo_conn->prepare($sql);
     $statement->bindValue(':id', $id);
+    return $statement->execute();
 }
 
 function findByid($id){

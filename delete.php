@@ -10,3 +10,4 @@ if (isset($_POST['id']) && isset($_POST['name']) && isset($_POST['description'])
 
 $id = $_GET['id'];
 $row = deleteById($id);
+header('location: index.php');
